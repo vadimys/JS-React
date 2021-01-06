@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 1</title>
+</head>
+<body>
+<fieldset>
+    <legend>Question 1</legend>
+    <label for="ageValue">How old are you?</label><br>
+    <input id="ageValue" type="number">
+    <input type="submit" value="Submit" onclick="setAge()"><br>
+    <label for="age">Answer: </label>
+    <output id="age"></output>
+</fieldset>
+<fieldset>
+    <legend>Question 2</legend>
+    <label for="yearValue">What is the date of your birth?</label><br>
+    <input id="yearValue" type="date">
+    <input type="submit" value="Submit" onclick="calculateAge()"><br>
+    <label for="year">Answer: </label>
+    <output id="year"></output>
+</fieldset>
+<fieldset>
+    <legend>Question 3</legend>
+    <label>Perimeter of rectangle. Please fill side data</label><br>
+    <label for="sideA">a</label>
+    <input id="sideA" type="number">
+    <input type="button" value="Submit" onclick="onPerimeter()"><br>
+    <label for="sideB">b</label>
+    <input id="sideB" type="number">
+    <input type="button" value="Clear" onclick="onPerimeter(true)"><br>
+    <label for="perimeter">Perimeter: </label>
+    <output id="perimeter"></output>
+</fieldset>
+<fieldset>
+    <legend>Question 4</legend>
+    <label>Area of a circle. Please fill side data</label><br>
+    <label for="radius">Radius</label>
+    <input id="radius" type="number">
+    <input type="button" value="Submit" onclick="onCircleArea()"><br>
+    <label for="area">Area: </label>
+    <output id="area"></output>
+</fieldset>
+<fieldset>
+    <legend>Question 5</legend>
+    <label for="speed">Average speed</label>
+    <input id="speed" type="number" value="50" min="1" max="130"><br>
+    <label for="time">Drive time</label>
+    <input id="time" type="number">
+    <input type="button" value="Submit" onclick="onDistance()"><br>
+    <label for="distance">Distance: </label>
+    <output id="distance"></output>
+</fieldset>
+<fieldset>
+    <legend>Question 6</legend>
+    <label for="km">Kilometre</label>
+    <input id="km" name="km" type="number" oninput="onKmMi()">
+    <label for="mi"> = Mile</label>
+    <input id="mi" name="mi" type="number" oninput="onKmMi(false)">
+</fieldset>
+<fieldset>
+    <legend>Question 7</legend>
+    <label for="amount">Money amount</label>
+    <input id="amount" type="number" oninput="onLitreCheck()">
+    <label for="price">Litre price</label>
+    <input id="price" type="number" min="1" step="1" oninput="onLitreCheck(false)"><br>
+    <label for="petrol">Petrol amount: </label>
+    <output id="petrol"></output><br>
+    <label for="left">Money left: </label>
+    <output id="left"></output><br>
+</fieldset>
+
+<script src="src/constants.js"></script>
+<script src="src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 2</title>
+</head>
+<style>
+    table, td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<fieldset>
+    <legend>Task 1 - Students average grade!</legend>
+    <table id='studentsMarks'>
+        <caption>Please edit marks:</caption>
+        <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Mark</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td><input id='john' type='number' min ='1' max='100' step='1' size='100' required value='80'></td>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td><input id='bill' type='number' min ='1' max='100' step='1' size='100' required value='77'></td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td><input id='david' type='number' min ='1' max='100' step='1' size='100' required value='68'></td>
+        </tr>
+        <tr>
+            <td>Ryan</td>
+            <td><input id='ryan' type='number' min ='1' max='100' step='1' size='100' required value='88'></td>
+        </tr>
+        <tr>
+            <td>Nick</td>
+            <td><input id='nick' type='number' min ='1' max='100' step='1' size='100' required value='95'></td>
+        </tr>
+        </tbody>
+    </table><br>
+    <input type="button" value="CALCULATE" onclick="onCalculateGrade()">
+</fieldset>
+<fieldset>
+    <legend>Task 2 - Sum of numbers multiple of 3 and 5 to 1000</legend>
+    <input type="button" value="CALCULATE" onclick="onCalculateTask2()"><br>
+</fieldset>
+<fieldset>
+    <legend>Task 3 - New Year Tree</legend>
+    <input type="button" value="DRAW" onclick="onDraw()"><br>
+</fieldset>
+
+<script src="src/index.js"></script>
+</body>
+</html>
