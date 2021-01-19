@@ -16,9 +16,9 @@ const animal = {
     },
     getDaysByDistance(distance) {
         const timePerDay = 12;
-        const fullTime = distance/this.avSpeed;
+        const fullTime = distance / this.avSpeed;
 
-        return fullTime/timePerDay;
+        return fullTime / timePerDay;
     }
 };
 
@@ -32,13 +32,21 @@ const someObject = {
     set name(value) {
         this.name = value;
     },
+    set sideC(value) {
+        this.sideC = value;
+    },
     get area() {
         return this.sideA * this.sideB;
     },
     get perimeter() {
         return (this.sideA + this.sideB) * 2;
+    },
+    setMeterValues(side) {
+        this.sideA /= 100;
+        this.sideB /= 100;
+        this.sideC /= 100;
     }
-}
+};
 
 /*3. Створимо аналог списка покупок (мінімум 5 покупок з всіма заданими пропертями. )
 {
@@ -53,9 +61,109 @@ const someObject = {
     Виводимо список покупок які ми купили.
     Додаємо функцію яка дозволить купити продукт.
     Додаємо функцію яка просумує всі зроблені покупки і виведе результат.(не забуваємо що є значення кількості та ціни за одиницю товару)
-Додаємо можливість збільшувати кількість товару.
+    Додаємо можливість збільшувати кількість товару.
     Додаємо можливість зменшувати кількість товару(менше 0 бути не може).*/
 
+const shopper = {
+    list: {
+        Eggs: {
+            count: 10,
+            price: 3.5,
+            buy: true,
+            outOfStore: false,
+        },
+        Milk: {
+            count: 1,
+            price: 40,
+            buy: false,
+            outOfStore: false,
+        },
+        Spinach: {
+            count: 2,
+            price: 30,
+            buy: false,
+            outOfStore: true,
+        },
+        Bread: {
+            count: 1,
+            price: 15,
+            buy: false,
+            outOfStore: false,
+        },
+        Bacon: {
+            count: 5,
+            price: 60,
+            buy: true,
+            outOfStore: false,
+        },
+        Cheese: {
+            count: 4,
+            price: 180,
+            buy: true,
+            outOfStore: false,
+        },
+        Beer: {
+            count: 40,
+            price: 25,
+            buy: true,
+            outOfStore: false,
+        }
+    },
+    get bought() {
+        const output = [];
+
+        for (let item in this.list) {
+            const data = this.list[item];
+
+            if (data.buy) {
+                output.push(item);
+            }
+        }
+
+        return output;
+    },
+    set bought(value) {
+        for (let item in this.list) {
+            if (item === value) {
+                this.list[item].buy = true;
+            }
+        }
+    },
+    increaseAmount(value) {
+        for (let item in this.list) {
+            if (item === value) {
+                this.list[item].count++;
+            }
+        }
+    },
+    decreaseAmount(value) {
+        for (let item in this.list) {
+            if (item === value) {
+                const data = this.list[item];
+
+                if (data.count !== 0) {
+                    this.list[item].count--;
+                }
+            }
+        }
+    },
+    showItems() {
+        const out = [];
+        const inShop = [];
+
+        for (let item in this.list) {
+            const data = this.list[item];
+
+            if (data.outOfStore) {
+                out.push(item);
+            } else {
+                inShop.push(item);
+            }
+        }
+
+        return [...inShop, ...out];
+    }
+};
 
 /*4. Задана колекція [{name: "Yura", age: 55, hobby: ["films", "games", "hiking"], type: "Admin"}, {}, {},{}].
 Вивести всіх адмінів. Вивести середній вік усіх працівників. Вивести тільки унікальні хоббі працівників.*/
