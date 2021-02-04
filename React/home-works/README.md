@@ -2,3 +2,4 @@
 ## Home Works
 
 ### 1. [ Home work 1](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw1)
+### 2. [ Home work 2](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw2)
