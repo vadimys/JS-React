@@ -1,5 +1,6 @@
 # JS+React 3.0 course
 ## Home Works
 
-### 1. [ Home work 1](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw1)
-### 2. [ Home work 2](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw2)
+### 1. [HW 1 - Getting started with React](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw1)
+### 2. [HW 2 - React Components, State, Props](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw2)
+### 3. [HW 3 - Lifecycle Methods](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/hw3)
