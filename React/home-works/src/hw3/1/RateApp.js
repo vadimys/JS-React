@@ -8,10 +8,7 @@ export default function App() {
     const [isReady, setReady] = useState(false);
     const getData = () => {
         setReady(false);
-
-        // setTimeout(() => {
-            fetchData();
-        // }, 3000);
+        fetchData();
     };
 
     async function fetchData() {
@@ -29,7 +26,8 @@ export default function App() {
 
     return (
         <div>
-            {!errors ? <FetchedView data={currencyData} ready={isReady}/> : <span>No DATA received!</span>}<hr/>
+            {!errors ? <FetchedView data={currencyData} ready={isReady}/> :
+                <span>No DATA received!</span>}<hr/>
             <button disabled={!isReady} onClick={getData}>Update</button>
             <FetchTimer fetchData={getData}/>
         </div>

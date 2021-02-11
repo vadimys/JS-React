@@ -1,10 +1,12 @@
 import {useEffect} from "react";
 
 export const FetchTimer = ({fetchData}) => {
+    const DELAY = 30000;
+
     useEffect(() => {
         const timer = setTimeout(() => {
             fetchData();
-        }, 30000);
+        }, DELAY);
 
         return () => clearTimeout(timer);
     });
