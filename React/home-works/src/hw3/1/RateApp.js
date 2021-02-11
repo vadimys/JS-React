@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import {FetchTimer} from "./FetchTimer";
 import {FetchedView} from "./FetchedView";
 
