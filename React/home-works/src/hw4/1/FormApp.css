@@ -1,0 +1,15 @@
+.login-form {
+    padding: 5px 20px;
+}
+
+.login-form fieldset {
+    margin: 20px 0;
+}
+
+.agree {
+    margin: 20px 0;
+}
+
+.agree input {
+    margin-right: 10px;
+}

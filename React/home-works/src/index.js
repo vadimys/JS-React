@@ -7,6 +7,7 @@ import HW2_1 from "./hw2/1/Input";
 import HW2_2 from "./hw2/2/UserLIstApp";
 import HW3_1 from "./hw3/1/RateApp";
 import HW3_2 from "./hw3/2/PhoneListApp";
+import HW4_1 from "./hw4/1/FormApp";
 
 // TODO: just uncomment line with home work
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
         {/*<HW2_2/>*/}
         {/*<HW3_1/>*/}
         {/*<HW3_2/>*/}
+        <HW4_1/>
     </React.StrictMode>,
     document.getElementById('root')
 );
