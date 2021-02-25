@@ -1,29 +1,29 @@
-import {useState} from 'react'
-import constants from "./components/Constants";
+import {useState, useEffect} from 'react'
+import constants from "../Constants";
 import Password from "./components/Password";
 import Login from "./components/Login";
 import Submit from "./components/Submit";
 import Agree from "./components/Agree";
-import "./FormApp.css";
+import "../LoginApp.css";
 
 export default function App() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState(false);
+    const [password, setPassword] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+    const [checked, setChecked] = useState(true);
     const [disabled, setDisabled] = useState(true);
-    const [checked] = useState(true);
     const handleSubmit = event => {
         event.preventDefault();
         setSubmitting(true);
 
         setTimeout(() => {
             setSubmitting(false);
-        }, 3000)
-    }
-
+            console.log(event);
+        }, constants.SUBMIT_DELAY);
+    };
     const onChange = event => {
         if (event.target.name === constants.AGREE_ID) {
-            console.log(event.target.checked);
+            setChecked(event.target.checked);
         }
 
         if (event.target.name === constants.LOGIN_ID) {
@@ -33,19 +33,10 @@ export default function App() {
         if (event.target.name === constants.PASSWORD_ID) {
             validate(event.target.value, constants.PASSWORD_REGEXP, setPassword);
         }
+    };
+    const validate = (value, regExp, setData) => setData(regExp.test(value));
 
-        if (email && password) {
-            setDisabled(false);
-        }
-    }
-
-    const validate = (value, regExp, setData) => {
-        const isOk = regExp.test(value);
-
-        if (isOk) {
-            setData(value);
-        }
-    }
+    useEffect(() => setDisabled(!email || !password || !checked), [email, password, checked]);
 
     return (
         <div className="login-form">
