@@ -25,7 +25,6 @@ export default function App() {
                             <button className=" list-group-item-action"
                                     onClick={(e) => {
                                         fetchData(item.id);
-                                        console.log(e.target.style);
                                         e.preventDefault();
                                     }}>
                                 {item.firstName + ' ' + item.lastName}

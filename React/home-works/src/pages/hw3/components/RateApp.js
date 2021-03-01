@@ -28,7 +28,7 @@ export default function App() {
         <div>
             {!errors ? <FetchedView data={currencyData} ready={isReady}/> :
                 <span>No DATA received!</span>}<hr/>
-            <button disabled={!isReady} onClick={getData}>Update</button>
+            <button disabled={!isReady} onClick={getData}>Update Data</button>
             <FetchTimer fetchData={getData}/>
         </div>
     );
