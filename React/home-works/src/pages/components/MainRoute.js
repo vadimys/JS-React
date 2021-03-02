@@ -1,9 +1,9 @@
 import {Route, Switch} from "react-router-dom";
-import HomeWork from './HomeWorkById'
+import Work from './Work'
 
 const MainRoute = ({name}) =>
     <Switch>
-        <Route path={`/${name}/:id`} component={(props) =><HomeWork {...props} name={name}/>}/>
+        <Route path={`/${name}/:id`} component={(props) =><Work {...props} name={name}/>}/>
     </Switch>;
 
 export default MainRoute;

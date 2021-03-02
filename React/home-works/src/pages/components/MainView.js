@@ -2,9 +2,12 @@ import constants from "../../default/Constants";
 import Title from './PageTitle'
 import List from './HomeWorkList'
 import MainRoute from "./MainRoute";
-import HomeWork from './HomeWorkById'
+import Work from './Work'
 
-export default function MainView({name, pages}) {
+export default function MainView({data}) {
+    const name = data.name;
+    const pages = data.pages;
+
     return (
         <>
             <Title name={name} text={constants[`${name.toUpperCase()}`]}/>
@@ -17,7 +20,7 @@ export default function MainView({name, pages}) {
                     <div className={`page-content-${name}`}>
                         <MainRoute name={name}/>
                     </div>
-                </> : <HomeWork name={name}/>}
+                </> : <Work name={name}/>}
             </div>
         </>
     )
