@@ -1,7 +1,7 @@
-const SAVE_ACTION = 'SAVE'
-const CLEAR_ACTION = 'CLEAR'
+const SAVE = 'SAVE'
+const CLEAR = 'CLEAR'
 
 export default {
-    SAVE_ACTION,
-    CLEAR_ACTION
+    SAVE,
+    CLEAR
 }
