@@ -6,3 +6,4 @@
 ### 3. [HW 3 - Lifecycle Methods](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/pages/hw3)
 ### 4. [HW 4 - Login Forms](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/pages/hw4)
 ### 5. [HW 5 - Redux](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/pages/hw5)
+### 6. [HW 6 - React Router v.4](https://github.com/vadimys/JS-React/tree/master/React/home-works/src/)
