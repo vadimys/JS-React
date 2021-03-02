@@ -12,7 +12,7 @@ export default function MainView({data}) {
         <>
             <Title name={name} text={constants[`${name.toUpperCase()}`]}/>
             <div className={`page-container-${name}`}>
-                {pages ? <>
+                {(pages && pages > 1) ? <>
                     <div className={`page-menu-${name}`}>
                         {pages ? <List name={name} pages={pages}/> : null}
                     </div>

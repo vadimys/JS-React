@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import {CardData} from "./Card";
 import {ListGroup} from 'react-bootstrap';
 
-export default function App() {
+export default function PhoneListApp() {
     const [list, setList] = useState();
     const [idData, setIdData] = useState();
     const fetchDefault = () => fetchData(list[0].id);
@@ -20,8 +20,8 @@ export default function App() {
             <>
                 <h4>Телефонний довідник:</h4>
                 <ListGroup>
-                    {list.map(item => (
-                        <div>
+                    {list.map((item, index) => (
+                        <div key={index}>
                             <button className=" list-group-item-action"
                                     onClick={(e) => {
                                         fetchData(item.id);

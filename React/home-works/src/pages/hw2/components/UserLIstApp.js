@@ -1,6 +1,6 @@
 import UserList from "./UserList";
 
-export default function App() {
+export default function UserListApp() {
     const listData = [{
         name: 'Alex',
         age: 40,

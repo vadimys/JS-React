@@ -1,16 +1,18 @@
 import {Route, Switch} from "react-router-dom";
 import Home from '../pages/components/Home'
 import MainView from '../pages/components/MainView'
+import homeWorks from "../pages/components/HomeWorks";
 
 export default function Main() {
     return (
         <Switch>
             <Route exact path='/' component={Home}/>
-            <Route path='/hw1' component={() => <MainView data={{name: 'hw1'}}/>}/>
-            <Route path='/hw2' component={() => <MainView data={{name: 'hw2', pages: 2}}/>}/>
-            <Route path='/hw3' component={() => <MainView data={{name: 'hw3', pages: 2}}/>}/>
-            <Route path='/hw4' component={() => <MainView data={{name: 'hw4', pages: 2}}/>}/>
-            <Route path='/hw5' component={() => <MainView data={{name: 'hw5'}}/>}/>
+            {Object.entries(homeWorks).map((data, index) => {
+                const name = data[0].toLowerCase();
+                const pages = Object.keys(data[1]).length;
+
+                return <Route key={index} path={`/${name}`} component={() => <MainView data={{name, pages}}/>}/>
+            })}
         </Switch>
     );
 }

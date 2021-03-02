@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import {FetchTimer} from "./FetchTimer";
 import {FetchedView} from "./FetchedView";
 
-export default function App() {
+export default function RateApp() {
     const [currencyData, setCurrencyData] = useState(<FetchedView/>);
     const [errors, setErrors] = useState(false);
     const [isReady, setReady] = useState(false);
@@ -26,8 +26,7 @@ export default function App() {
 
     return (
         <div>
-            {!errors ? <FetchedView data={currencyData} ready={isReady}/> :
-                <span>No DATA received!</span>}<hr/>
+            {!errors ? <FetchedView data={currencyData} ready={isReady}/> : <span>No DATA received!</span>}<hr/>
             <button disabled={!isReady} onClick={getData}>Update Data</button>
             <FetchTimer fetchData={getData}/>
         </div>
